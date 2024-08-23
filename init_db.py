@@ -16,8 +16,8 @@ db.execute(create_users_table)
 
 #insert rows into tables
 insert_user_stmt = "INSERT INTO users(username, password) VALUES (?, ?)"
-db.execute(insert_user_stmt, ("kate", generate_password_hash("password", method='pbkdf2')))
-db.execute(insert_user_stmt, ("chris", generate_password_hash("password", method='pbkdf2')))
+db.execute(insert_user_stmt, ("kate", generate_password_hash("password")))
+db.execute(insert_user_stmt, ("chris", generate_password_hash("password")))
 
 author_id = db.execute("SELECT rowid FROM users WHERE username=?", ("kate",)).fetchone()[0]
 insert_stmt = "INSERT INTO posts (author_id, title, content) VALUES (? , ?, ?)"
