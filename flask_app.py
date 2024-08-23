@@ -86,7 +86,7 @@ def signup():
         return redirect(url_for("login"))
     return render_template("signup.html")
 
-app = Flask(__name__, template_folder=os.getcwd(), static_folder=os.getcwd())
+app = Flask(__name__) # default is 'templates' and 'static' 
 app.config.from_mapping(SECRET_KEY='dev')
 app.add_url_rule("/","index", index) 
 app.add_url_rule("/posts","posts", blog_posts)
