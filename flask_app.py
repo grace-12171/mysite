@@ -96,4 +96,4 @@ app.add_url_rule("/login", "login", login, methods= ['GET', 'POST'])
 app.add_url_rule("/logout", "logout", logout, methods= ['POST'])
 app.add_url_rule("/signup","signup", signup, methods = ['GET', 'POST'])
 
-app.run(port = 6500)
+#app.run(port = 6500)
