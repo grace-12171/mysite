@@ -6,7 +6,7 @@ from werkzeug.security import check_password_hash, generate_password_hash
 
 def get_db():
     if 'db' not in g:
-        g.db = sqlite3.connect("blog.db")
+        g.db = sqlite3.connect("/home/grace12171/blog.db")
     return g.db
 
 def index():
