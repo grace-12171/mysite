@@ -2,7 +2,7 @@ import sqlite3
 from werkzeug.security import generate_password_hash
 
 
-db = sqlite3.connect("blog.db")
+db = sqlite3.connect("/home/grace12171/blog.db")
 
 #Drop tables
 db.execute("DROP TABLE IF EXISTS posts")
